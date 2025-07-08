@@ -454,7 +454,7 @@ const RocketChest = () => {
       fetchChestList();
       showAlert(updatedIsPublic ? '로켓이 진열장에 추가되었습니다.' : '로켓이 진열장에서 제거되었습니다.');
 
-    } catch (error) {
+    } catch (err) {
       handleApiError(err);
     }
   }, [rockets, selectedRocket, idKey, isGroupTab, fetchChestList]);
