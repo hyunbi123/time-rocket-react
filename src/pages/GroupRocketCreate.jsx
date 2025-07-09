@@ -224,7 +224,7 @@ const GroupRocketCreate = () => {
       }
 
       showAlert('설정이 성공적으로 저장되었습니다!');
-    } catch (error) {
+    } catch (err) {
       handleApiError(err);
     } finally {
       setIsLoading(false);
@@ -935,10 +935,6 @@ const GroupRocketCreate = () => {
                         onClick={() => {
                           const updated = { ...formData, design: design.value };
                           setFormData(updated);
-
-                          if (isOwner) {
-                            broadcastRocketConfig(updated);
-                          }
                         }}
                       >
                         <div className={styles.designImageWrapper}>
