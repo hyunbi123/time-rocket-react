@@ -4,8 +4,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at 70% 30%, #3a6cf6 0%, #222c5b 80%) no-repeat;
-  /* 우주 느낌의 별빛 효과 */
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    rgba(58, 108, 246, 0.3) 0%,
+    rgba(34, 44, 91, 0.7) 80%
+  ) no-repeat;
   background-blend-mode: lighten;
   display: flex;
   justify-content: center;
@@ -13,7 +16,6 @@
   z-index: 1000;
   padding: 20px;
   animation: fadeIn 0.2s ease-out;
-  /* 약간의 별빛 효과 추가 */
   box-shadow: 0 0 80px 10px #7f53ac55 inset;
 }
 

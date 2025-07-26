@@ -495,11 +495,7 @@ const Display = () => {
           <p>로켓을 <span className="highlight">드래그하여</span> 다른 위치나 빈 공간으로 이동할 수 있습니다.</p>
           <p>로켓을 <span className="highlight">클릭하면</span> 자세한 정보를 볼 수 있습니다.</p>
           <p>보관함에서 <span className="highlight">오른쪽 클릭하여</span> 로켓을 진열장으로 보낼 수 있습니다.</p>
-          <p className="refresh-note">보관함에서 진열장에 추가한 로켓은 새로고침 후 나타납니다.</p>
         </div>
-        <button className="refresh-btn" onClick={handleRefresh}>
-          진열장 새로고침
-        </button>
       </div>
 
       {/* 로켓 상세 정보 모달 */}

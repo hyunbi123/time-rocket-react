@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import useAuthStore from '../authStore';
 import api from '../utils/api';
 import '../style/RocketChest.css';
-import { LockIcon, UserIcon, SearchIcon, CloseIcon, GroupIcon } from '../components/ui/Icons';
+import { LockIcon, UserIcon, SearchIcon, CloseIcon, GroupIcon, RocketIcon } from '../components/ui/Icons';
 import { ConfirmModal, AlertModal } from '../components/common/Modal';
 import useAlertModal from '../components/common/useAlertModal';
 import useConfirmModal from '../components/common/useConfirmModal';
@@ -85,14 +85,13 @@ const RocketItem = ({ rocket, idKey, isSentTab, isGroupTab, onClick, onContextMe
           onError={(e) => { e.target.src = '/src/assets/rocket.png' }}
         />
         {rocket.isPublic && <div className="public-badge">공개</div>}
-        {isGroupTab && <div className="group-badge"><GroupIcon /> 모임</div>}
         {isDeleteMode && <div className="delete-checkbox">{isSelected ? '✓' : ''}</div>}
       </div>
       <div className="rocket-details">
         <h3 className="rocket-name">{rocket.rocketName || '이름 없음'}</h3>
         <div className={isGroupTab ? "group-info" : "rocket-sender"}>
           {isGroupTab ? (
-            <><GroupIcon /> {rocket.groupName || '모임 정보 없음'}</>
+            <><RocketIcon /> {rocket.groupName || '모임 정보 없음'}</>
           ) : (
             <><UserIcon /> {isSentTab ? (rocket.receiverEmail || '수신자 정보 없음') : (rocket.senderEmail || rocket.senderName || '발신자 정보 없음')}</>
           )}
